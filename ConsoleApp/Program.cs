@@ -12,13 +12,18 @@ namespace ConsoleApp
         [WithIO]
         static void Main(string[] args)
         {
-            Write("enter first line");
+            Write("enter first line:");
             var first = Read();
-            Write("enter second line");
+            Write(null);
+
+            Write("enter second line:");
             var second = Read();
-            Write($"here is {nameof(Concat)} result");
+            Write(null);
+
+            Write($"here is `{nameof(Concat)}` result:");
             var final = Concat(first, second);
             Write(final);
+            Write("   ＼( -_-)");
         }
     }
 }
