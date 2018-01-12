@@ -9,7 +9,7 @@ namespace ConsoleApp
     class Program
     {
         // enable next line to suppress these stupid emoji-containing errors
-        [WithIO]
+        // [WithIO]
         static void Main(string[] args)
         {
             Write("enter first line:");
