@@ -7,14 +7,14 @@ Example:
 ```csharp
 using WithIO = System.ObsoleteAttribute; // fancy alias
 
-void Pure()
+void Foo()
 {
   // ... any non-IO code
-  Impure(); // error, `Impure` cannot be used here since `Pure` is not decorated with [WithIO]
+  Bar(); // error, `Bar` cannot be used here since `Foo` is not decorated with [WithIO]
 }
 
-[WithIO]
-void Impure()
+[WithIO] // explicitly state that this function is impure
+void Bar()
 {
   // ... any IO code, interaction with filesystem || database || network etc.
 }
